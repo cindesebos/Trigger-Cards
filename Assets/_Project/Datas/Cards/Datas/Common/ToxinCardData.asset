@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e779a402ee0f048b25e04b80e5aaca, type: 3}
+  m_Name: ToxinCardData
+  m_EditorClassIdentifier: 
+  <Icon>k__BackingField: {fileID: 6034864100499761545, guid: 46b381f798528644a87eaaf7f6c86e0a, type: 3}
+  <Rarity>k__BackingField: 0
+  <AbilityCaster>k__BackingField: {fileID: 11400000, guid: ca85f64a40d1e864cb40b9eb93d9d896, type: 2}
