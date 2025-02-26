@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Myth-Cards.sln"
+    "dotnet.defaultSolution": "Trigger-Cards.sln"
 }

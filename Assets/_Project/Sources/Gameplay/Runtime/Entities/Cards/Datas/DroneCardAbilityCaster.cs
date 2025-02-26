@@ -7,6 +7,8 @@ namespace Sources.Gameplay.Runtime.Entities
     public class DroneCardAbilityCaster : CardAbilityCaster
     {
         [SerializeField] private int _damage;
+        [SerializeField] private float _moveSpeed;
+        [SerializeField] private float _height;
         [SerializeField] private float _bulletSpeed;
         [SerializeField] private float _shotCooldown;
         [SerializeField] private Drone _drone;
@@ -25,7 +27,7 @@ namespace Sources.Gameplay.Runtime.Entities
 
             Drone drone = Instantiate(_drone, mousePosition, Quaternion.identity);
 
-            drone.Init(_damage, _bulletSpeed, _shotCooldown, EntitiesObserver);
+            drone.Init(_damage, _moveSpeed, _bulletSpeed, _shotCooldown, EntitiesObserver);
         }
     }
 }

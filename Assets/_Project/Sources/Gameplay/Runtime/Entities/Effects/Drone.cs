@@ -12,23 +12,31 @@ namespace Sources.Gameplay.Runtime.Entities
 
         [SerializeField] private Bullet _bulletPrefab;
 
+        private Transform _target;
         private int _damage;
+        private float _moveSpeed;
         private float _bulletSpeed;
         private float _shotCooldown;
         private IEntitiesObserver _entitiesObserver;
         private float _shotCooldownRemaining;
 
-        public void Init(int damage, float bulletSpeed, float shotCooldown, IEntitiesObserver entitiesObserver)
+        public void Init(int damage, float moveSpeed, float bulletSpeed, float shotCooldown, IEntitiesObserver entitiesObserver)
         {
             _damage = damage;
+            _moveSpeed = moveSpeed;
             _bulletSpeed = bulletSpeed;
             _shotCooldown = shotCooldown;
             _entitiesObserver = entitiesObserver;
+            _target = _entitiesObserver.GetCharacter().GetDronePoint();
             _shotCooldownRemaining = _shotCooldown;
+
+            Invoke(nameof(Hide), LifeTime);
         }
 
         private void Update()
         {
+            Move();
+
             if(_shotCooldownRemaining <= 0)
             {
                 Enemy enemy = FindClosestEnemy();
@@ -39,6 +47,11 @@ namespace Sources.Gameplay.Runtime.Entities
                 }
             }
             else _shotCooldownRemaining -= Time.deltaTime;
+        }
+
+        private void Move()
+        {
+            transform.position = Vector3.MoveTowards(transform.position, _target.position, _moveSpeed * Time.deltaTime);
         }
 
         private void Shoot(Enemy enemy)

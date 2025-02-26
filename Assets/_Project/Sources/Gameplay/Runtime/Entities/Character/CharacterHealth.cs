@@ -25,10 +25,12 @@ namespace Sources.Gameplay.Runtime.Entities
 
         private int _health;
         private CharacterData _data;
+        private Character _character;
 
-        public void Init(CharacterData data)
+        public void Init(CharacterData data, Character character)
         {
             _data = data;
+            _character = character;
 
             Health = _data.Health;
         }
@@ -38,9 +40,14 @@ namespace Sources.Gameplay.Runtime.Entities
             if(Input.GetKeyDown(KeyCode.Space)) ApplyDamage(1);
         }
 
-        public void ApplyDamage(int damage) => Health -= damage;
+        public void ApplyDamage(int damage)
+        {
+            if(!_character.IsImmortality()) Health -= damage;
+        }
 
         public void ApplyHeal(int heal) => Health += heal;
+
+        public void ApplyMaxHeal() => Health = _data.Health;
 
         private void Die() => gameObject.SetActive(false);
     }

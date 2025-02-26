@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 036d3f0bb7860414a918273cb723f528, type: 3}
-  m_Name: DroneCardAbilityCaster
+  m_Script: {fileID: 11500000, guid: 9251b95a13f8be249bb4d76901fbdb7f, type: 3}
+  m_Name: PortalCardAbilityCaster
   m_EditorClassIdentifier: 
-  _damage: 1
-  _moveSpeed: 4
-  _height: 1
-  _bulletSpeed: 13
-  _shotCooldown: 1
-  _drone: {fileID: 2187922709361672444, guid: 8106379980fa0a24db86afd0c2624d9b, type: 3}
+  _portal: {fileID: 2893554446561775743, guid: 9387fbcd7f77a224ba0d567cb87f570c, type: 3}
+  _buff: {fileID: 11400000, guid: 0d583d1a5cab32a46809f48b47f23a6b, type: 2}

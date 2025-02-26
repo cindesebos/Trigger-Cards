@@ -510,7 +510,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 00000000990ec0dd9d84e0b7
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -649,11 +649,11 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1210022755
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &1117931480
 RectTransform:
@@ -1166,7 +1166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _panel: {fileID: 0}
   _cardPrefab: {fileID: 252183948877608641, guid: 8a1ffb9c77f471e4b9a6ab23045ab4dc, type: 3}
-  _cardData: {fileID: 11400000, guid: 2535ff2c3f295904c8969e40195a0e6f, type: 2}
+  _cardData: {fileID: 11400000, guid: e37cfe78c2edca44eab81f6964e6d5ff, type: 2}
   _cardParent: {fileID: 1647997838}
   _spawnCardButton: {fileID: 0}
 --- !u!1 &4979882136968627074

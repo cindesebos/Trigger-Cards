@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Sources.Gameplay.Runtime.Entities
 {
-    public class SpikesEffect : Effect
+    public class Spikes : Effect
     {
         [SerializeField] private Spike[] _spikes;
 

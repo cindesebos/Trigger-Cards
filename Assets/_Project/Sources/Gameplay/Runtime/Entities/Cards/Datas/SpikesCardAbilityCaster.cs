@@ -8,13 +8,13 @@ namespace Sources.Gameplay.Runtime.Entities
     {
         [SerializeField] private float _moveSpeed;
         [SerializeField] private int _damage;
-        [SerializeField] private SpikesEffect _effect;
+        [SerializeField] private Spikes _effect;
 
         public override void Cast()
         {
-            SpikesEffect spikesEffect = Instantiate(_effect);
+            Spikes spikes = Instantiate(_effect);
 
-            spikesEffect.Init(EntitiesObserver.GetCharacter().Transform, _moveSpeed, _damage);
+            spikes.Init(EntitiesObserver.GetCharacter().Transform, _moveSpeed, _damage);
         }
     }
 }

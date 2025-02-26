@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c886d854c4cde468b27b1307bb77c7, type: 3}
   m_Name: FlameCardAbilityCaster
   m_EditorClassIdentifier: 
+  _damage: 1
   _radius: 2
   _rotationSpeed: 2
-  _flameEffect: {fileID: 4120047182421281405, guid: 1381c01766e898042a79726641643f7c, type: 3}
+  _effect: {fileID: 4120047182421281405, guid: 1381c01766e898042a79726641643f7c, type: 3}

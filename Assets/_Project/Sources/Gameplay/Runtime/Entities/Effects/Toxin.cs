@@ -4,7 +4,7 @@ using Sources.Gameplay.Runtime.Buffs;
 
 namespace Sources.Gameplay.Runtime.Entities
 {
-    public class ToxinEffect : Effect
+    public class Toxin : Effect
     {
         private const float LifeTime = 2.5f;
 
@@ -19,6 +19,7 @@ namespace Sources.Gameplay.Runtime.Entities
             _rigidbody2D = GetComponent<Rigidbody2D>();
 
             _rigidbody2D.linearVelocity = transform.right * _moveSpeed;
+            
             Invoke(nameof(Hide), LifeTime);
         }
 
