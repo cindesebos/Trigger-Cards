@@ -12,7 +12,10 @@ namespace Sources.Gameplay.Runtime.Entities
         [SerializeField] private float _bulletSpeed;
         [SerializeField] private float _shotCooldown;
         [SerializeField] private Drone _drone;
+        [SerializeField] private SpriteRenderer _visualCastPrefab;
+        [SerializeField] private Sprite _visualCastSprite;
 
+        private SpriteRenderer _visualCastlSlot;
         private Camera _camera;
 
         public override void Init(IEntitiesObserver entitiesObserver)
@@ -28,6 +31,20 @@ namespace Sources.Gameplay.Runtime.Entities
             Drone drone = Instantiate(_drone, mousePosition, Quaternion.identity);
 
             drone.Init(_damage, _moveSpeed, _bulletSpeed, _shotCooldown, EntitiesObserver);
+        }
+
+        public override void SetVisualCastDisplay(bool state)
+        {
+            if(state)
+            {
+                if(_visualCastlSlot == null) _visualCastlSlot = Instantiate(_visualCastPrefab);
+
+                Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
+
+                _visualCastlSlot.transform.position = mousePosition;
+                _visualCastlSlot.sprite = _visualCastSprite;
+            }
+            else Destroy(_visualCastlSlot);
         }
     }
 }

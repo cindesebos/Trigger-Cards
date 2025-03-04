@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: TapeCardAbilityCaster
   m_EditorClassIdentifier: 
   _healthAmount: 1
+  _visualCastPrefab: {fileID: 4038182791745340039, guid: d295b559ba26f87459340d978d948c89, type: 3}
+  _visualCastSprite: {fileID: -1475315553688969893, guid: d33eefca51f1bf54b9799d5a59d1f7f3, type: 3}

@@ -18,3 +18,5 @@ MonoBehaviour:
   _bulletSpeed: 13
   _shotCooldown: 1
   _drone: {fileID: 2187922709361672444, guid: 8106379980fa0a24db86afd0c2624d9b, type: 3}
+  _visualCastPrefab: {fileID: 4038182791745340039, guid: d295b559ba26f87459340d978d948c89, type: 3}
+  _visualCastSprite: {fileID: -9076254685148775836, guid: 005b71537c1c4b24aab9d14d482ffc6a, type: 3}

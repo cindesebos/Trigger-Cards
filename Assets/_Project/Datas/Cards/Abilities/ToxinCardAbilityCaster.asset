@@ -15,3 +15,5 @@ MonoBehaviour:
   _effect: {fileID: 8651746125853285565, guid: 91ec4eb13afdea64c9362f8f3936a44a, type: 3}
   _debuff: {fileID: 11400000, guid: 0e2bcb7e63b92e045badfe80031f860f, type: 2}
   _moveSpeed: 10
+  _visualCastPrefab: {fileID: 4038182791745340039, guid: d295b559ba26f87459340d978d948c89, type: 3}
+  _visualCastSprite: {fileID: 4116864735629085539, guid: 90fa4674b836caa44927e236ea5ca89e, type: 3}

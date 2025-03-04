@@ -16,3 +16,6 @@ MonoBehaviour:
   _damage: 1
   _moveSpeed: 2
   _shotCooldown: 0.5
+  _shotRange: 2
+  _visualCastPrefab: {fileID: 4038182791745340039, guid: d295b559ba26f87459340d978d948c89, type: 3}
+  _visualCastSprite: {fileID: 735899951961675896, guid: b7b203f15cc35054b9ff8e6f143d0766, type: 3}

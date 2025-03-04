@@ -466,7 +466,7 @@ MonoBehaviour:
   m_RefResolutionX: 640
   m_RefResolutionY: 360
   m_CropFrame: 0
-  m_GridSnapping: 0
+  m_GridSnapping: 2
   m_FilterMode: 0
   m_UpscaleRT: 0
   m_PixelSnapping: 0
@@ -1166,7 +1166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _panel: {fileID: 0}
   _cardPrefab: {fileID: 252183948877608641, guid: 8a1ffb9c77f471e4b9a6ab23045ab4dc, type: 3}
-  _cardData: {fileID: 11400000, guid: e37cfe78c2edca44eab81f6964e6d5ff, type: 2}
+  _cardData: {fileID: 11400000, guid: 98c15d1f46883844fa1589559c2b3d33, type: 2}
   _cardParent: {fileID: 1647997838}
   _spawnCardButton: {fileID: 0}
 --- !u!1 &4979882136968627074

@@ -23,7 +23,6 @@ namespace Sources.Gameplay.Runtime.Entities
             _wholeHeart = _data.WholeHeart;
             _brokenHeart = _data.BrokenHeart;
 
-            CreateHearts();
             InitHearts();
 
             _health.HealthChanged += OnHealthChanged;
@@ -46,6 +45,13 @@ namespace Sources.Gameplay.Runtime.Entities
 
         private void OnHealthChanged(int currentHealth)
         {
+            if(currentHealth > _hearts.Count)
+            {
+                int healthToCreate = currentHealth - _hearts.Count;
+
+                for(int h=0; h<healthToCreate; h++) _hearts.Add(Instantiate(_heartPrefab, _heartsParent));
+            }
+
             for(int i=0; i<_hearts.Count; i++)
             {
                 if(i < currentHealth) _hearts[i].sprite = _wholeHeart;

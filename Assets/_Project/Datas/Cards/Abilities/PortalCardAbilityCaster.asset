@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _portal: {fileID: 2893554446561775743, guid: 9387fbcd7f77a224ba0d567cb87f570c, type: 3}
   _buff: {fileID: 11400000, guid: 0d583d1a5cab32a46809f48b47f23a6b, type: 2}
+  _visualCastPrefab: {fileID: 4038182791745340039, guid: d295b559ba26f87459340d978d948c89, type: 3}
+  _visualCastSprite: {fileID: 4862290026971311294, guid: fb1c8fffb22b6a049a01fe6c114fb177, type: 3}

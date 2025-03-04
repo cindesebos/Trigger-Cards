@@ -9,6 +9,10 @@ namespace Sources.Gameplay.Runtime.Entities
     {
         [SerializeField] private Portal _portal;
         [SerializeField] private ImmortalityBuff _buff;
+        [SerializeField] private SpriteRenderer _visualCastPrefab;
+        [SerializeField] private Sprite _visualCastSprite;
+
+        private SpriteRenderer _visualCastlSlot;
 
         private Camera _camera;
 
@@ -25,6 +29,20 @@ namespace Sources.Gameplay.Runtime.Entities
             Portal portal = Instantiate(_portal, EntitiesObserver.GetCharacter().Transform.position, Quaternion.identity);
 
             portal.Init(EntitiesObserver, mousePosition, _buff);
+        }
+
+        public override void SetVisualCastDisplay(bool state)
+        {
+            if(state)
+            {
+                if(_visualCastlSlot == null) _visualCastlSlot = Instantiate(_visualCastPrefab);
+
+                Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
+
+                _visualCastlSlot.transform.position = mousePosition;
+                _visualCastlSlot.sprite = _visualCastSprite;
+            }
+            else Destroy(_visualCastlSlot);
         }
     }
 }

@@ -3,7 +3,7 @@ using System;
 
 namespace Sources.Gameplay.Runtime.Entities
 {
-    public class PlasmaView : Effect
+    public class PlasmaView : MonoBehaviour
     {
         private const float LightningLifeTime = 0.1f;
 

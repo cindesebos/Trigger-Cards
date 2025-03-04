@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: MarkCardAbilityCaster
   m_EditorClassIdentifier: 
   _debuff: {fileID: 11400000, guid: fc00d674643569640ad30a71012a3961, type: 2}
+  _visualCastPrefab: {fileID: 4038182791745340039, guid: d295b559ba26f87459340d978d948c89, type: 3}
+  _visualCastSprite: {fileID: 7396010772315762360, guid: 4041ad1f38e4b714dab2c405f61b21eb, type: 3}

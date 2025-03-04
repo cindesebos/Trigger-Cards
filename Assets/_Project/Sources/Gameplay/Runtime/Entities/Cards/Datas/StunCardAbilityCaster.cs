@@ -10,7 +10,10 @@ namespace Sources.Gameplay.Runtime.Entities
         [SerializeField] private StunDebuff _debuff;
         [SerializeField] private int _radius;
         [SerializeField] private LayerMask _targetLayer;
+        [SerializeField] private SpriteRenderer _visualCastPrefab;
+        [SerializeField] private Sprite _visualCastSprite;
 
+        private SpriteRenderer _visualCastlSlot;
         private Camera _camera;
 
         public override void Init(IEntitiesObserver entitiesObserver)
@@ -28,6 +31,19 @@ namespace Sources.Gameplay.Runtime.Entities
             {
                 if(enemyCollider.TryGetComponent(out Enemy enemy)) enemy.AddBuff(_debuff);
             }
+        }
+
+        public override void SetVisualCastDisplay(bool state)
+        {
+            if(state)
+            {
+                Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
+
+                if(_visualCastlSlot == null) _visualCastlSlot = Instantiate(_visualCastPrefab);
+                _visualCastlSlot.transform.position = mousePosition;
+                _visualCastlSlot.sprite = _visualCastSprite;
+            }
+            else Destroy(_visualCastlSlot);
         }
     }
 }

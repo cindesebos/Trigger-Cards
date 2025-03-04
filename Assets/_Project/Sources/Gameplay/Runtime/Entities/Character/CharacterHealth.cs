@@ -13,7 +13,7 @@ namespace Sources.Gameplay.Runtime.Entities
             get => _health;
             private set
             {
-                if(value < 0 || value > _data.Health) throw new ArgumentOutOfRangeException();
+                if(value < 0 || value > _maxHealth) return;
 
                 _health = value;
 
@@ -23,7 +23,8 @@ namespace Sources.Gameplay.Runtime.Entities
             }
         }
 
-        private int _health;
+        public int _health;
+        public int _maxHealth;
         private CharacterData _data;
         private Character _character;
 
@@ -32,7 +33,8 @@ namespace Sources.Gameplay.Runtime.Entities
             _data = data;
             _character = character;
 
-            Health = _data.Health;
+            _maxHealth = _data.Health;
+            Health = _maxHealth;
         }
 
         private void Update()
@@ -47,7 +49,11 @@ namespace Sources.Gameplay.Runtime.Entities
 
         public void ApplyHeal(int heal) => Health += heal;
 
-        public void ApplyMaxHeal() => Health = _data.Health;
+        public void ApplyMaxHealAddMaxHealth(int newMaxHealth)
+        {
+            _maxHealth += newMaxHealth;
+            Health = _maxHealth;
+        }
 
         private void Die() => gameObject.SetActive(false);
     }

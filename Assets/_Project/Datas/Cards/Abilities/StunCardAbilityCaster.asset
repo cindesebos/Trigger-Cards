@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf3301b08f2c12b4bb33f76fbc61e7cc, type: 3}
   m_Name: StunCardAbilityCaster
   m_EditorClassIdentifier: 
-  _stunDebuff: {fileID: 11400000, guid: f6c639b4feb617d4f8d8431e72663a69, type: 2}
-  _radius: 4
+  _debuff: {fileID: 11400000, guid: f6c639b4feb617d4f8d8431e72663a69, type: 2}
+  _radius: 1
   _targetLayer:
     serializedVersion: 2
     m_Bits: 64
+  _visualCastPrefab: {fileID: 4038182791745340039, guid: d295b559ba26f87459340d978d948c89, type: 3}
+  _visualCastSprite: {fileID: 2529754389470984411, guid: 9cda007ca58f3ed448327b420081734a, type: 3}

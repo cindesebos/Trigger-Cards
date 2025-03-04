@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 13
   _damage: 3
-  _spikesEffect: {fileID: 7540738412585575142, guid: 2109ef4483a1516418666a20da0e5bd5, type: 3}
+  _effect: {fileID: 7540738412585575142, guid: 2109ef4483a1516418666a20da0e5bd5, type: 3}
+  _visualCastPrefab: {fileID: 4038182791745340039, guid: d295b559ba26f87459340d978d948c89, type: 3}
+  _visualCastSprite: {fileID: 2505348692308701368, guid: 6201abcf136b36e489671ea867a2cbdf, type: 3}

@@ -11,6 +11,10 @@ namespace Sources.Gameplay.Runtime.Entities
         [SerializeField] private float _moveSpeed;
         [SerializeField] private float _shotCooldown;
         [SerializeField] private float _shotRange = 2f;
+        [SerializeField] private SpriteRenderer _visualCastPrefab;
+        [SerializeField] private Sprite _visualCastSprite;
+
+        private SpriteRenderer _visualCastlSlot;
 
         private Camera _camera;
 
@@ -28,6 +32,21 @@ namespace Sources.Gameplay.Runtime.Entities
             Plasma plasma = Instantiate(_plasma, EntitiesObserver.GetCharacter().Transform.position, Quaternion.Euler(0f, 0f, angle));
 
             plasma.Init(_damage, _moveSpeed, _shotCooldown, _shotRange, EntitiesObserver);
+        }
+
+
+        public override void SetVisualCastDisplay(bool state)
+        {
+            if(state)
+            {
+                if(_visualCastlSlot == null) _visualCastlSlot = Instantiate(_visualCastPrefab);
+
+                Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
+
+                _visualCastlSlot.transform.position = mousePosition;
+                _visualCastlSlot.sprite = _visualCastSprite;
+            }
+            else Destroy(_visualCastlSlot);
         }
     }
 }
