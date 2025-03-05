@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22f6609bd34201547bc07d228c63dd61, type: 3}
+  m_Name: MeteoriteCardAbilityCaster
+  m_EditorClassIdentifier: 
+  _radius: 1.8
+  _damage: 50
+  _meteorite: {fileID: 5075989335672288891, guid: 99a612f235138d54a819e2c524811912, type: 3}
+  _visualCastPrefab: {fileID: 4038182791745340039, guid: d295b559ba26f87459340d978d948c89, type: 3}
+  _visualCastSprite: {fileID: -5736621153622266560, guid: 479e49e623b7df24da4f1257a3582e79, type: 3}

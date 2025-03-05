@@ -15,6 +15,7 @@ namespace Sources.Gameplay.Runtime.Entities
 
         private CharacterInput _input;
         public bool _isImmortality = false;
+        public bool _isLaserShootingState = false;
 
         [Inject]
         private void Construct(CharacterInput input)
@@ -52,8 +53,16 @@ namespace Sources.Gameplay.Runtime.Entities
 
         public void SetImmortalityState(bool state) => _isImmortality = state;
 
+        public void SetLaserShootingState(bool state)
+        {
+            if(state) _input.Disable();
+            else _input.Enable();
+        }
+
         public Transform GetDronePoint() => _dronePoint;
 
         public bool IsImmortality() => _isImmortality;
+
+        public bool IsLaserShootingState() => _isLaserShootingState;
     }
 }

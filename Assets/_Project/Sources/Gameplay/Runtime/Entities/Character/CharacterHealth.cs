@@ -13,18 +13,18 @@ namespace Sources.Gameplay.Runtime.Entities
             get => _health;
             private set
             {
-                if(value < 0 || value > _maxHealth) return;
-
-                _health = value;
+                _health = Mathf.Clamp(value, 0, _maxHealth);
 
                 HealthChanged?.Invoke(_health);
+
+                Debug.Log("now health is " + _health);
 
                 if(_health <= 0) Die();
             }
         }
 
-        public int _health;
-        public int _maxHealth;
+        private int _health;
+        private int _maxHealth;
         private CharacterData _data;
         private Character _character;
 
@@ -44,6 +44,7 @@ namespace Sources.Gameplay.Runtime.Entities
 
         public void ApplyDamage(int damage)
         {
+            Debug.Log("apply damage: " + damage + " immorality state is " + _character.IsImmortality());
             if(!_character.IsImmortality()) Health -= damage;
         }
 

@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 90fa4674b836caa44927e236ea5ca89e
+guid: fed9df0cfbe842e44a73d76761086187
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4116864735629085539
-    second: ToxinDirection_0
+      213: -6691296043238719418
+    second: Meteorite_0
+  - first:
+      213: -2163108387443074034
+    second: Meteorite_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +116,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ToxinDirection_0
+      name: Meteorite_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        x: 16
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 36b018b3aaa022930800000000000000
-      internalID: 4116864735629085539
+      spriteID: 64087cf53bdb323a0800000000000000
+      internalID: -6691296043238719418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meteorite_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0c99cbd1681bf1e0800000000000000
+      internalID: -2163108387443074034
       vertices: []
       indices: 
       edges: []
@@ -138,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e99e7927cba5ea64684fcc799f1a3799
+    spriteID: 709457c0d1954454e9de872b7cac9ea9
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ToxinDirection_0: 4116864735629085539
+      Meteorite_0: -6691296043238719418
+      Meteorite_1: -2163108387443074034
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

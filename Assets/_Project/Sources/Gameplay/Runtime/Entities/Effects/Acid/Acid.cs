@@ -25,9 +25,9 @@ namespace Sources.Gameplay.Runtime.Entities
             StartCoroutine(JumpCoroutine(targetPosition));
         }
 
-        private IEnumerator JumpCoroutine(Vector2 target)
+        private IEnumerator JumpCoroutine(Vector2 targetPosition)
         {
-            Vector2 start = transform.position;
+            Vector2 startPosition = transform.position;
             float time = 0f;
 
             while (time < 1f)
@@ -35,14 +35,14 @@ namespace Sources.Gameplay.Runtime.Entities
                 time += Time.deltaTime / _jumpTime;
                 float heightOffset = _jumpHeight * Mathf.Sin(Mathf.PI * time);
 
-                Vector2 newPosition = Vector2.Lerp(start, target, time);
+                Vector2 newPosition = Vector2.Lerp(startPosition, targetPosition, time);
                 newPosition.y += heightOffset;
 
                 transform.position = newPosition;
                 yield return null;
             }
 
-            transform.position = target;
+            transform.position = targetPosition;
             _isActive = true;
         }
 

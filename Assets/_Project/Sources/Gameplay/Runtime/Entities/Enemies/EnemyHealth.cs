@@ -14,9 +14,7 @@ namespace Sources.Gameplay.Runtime.Entities
             private set
             {
                 Debug.Log("health was changed with value "+ value);
-                if(value < 0) throw new ArgumentOutOfRangeException();
-
-                _health = value;
+                _health = Mathf.Clamp(value, 0, _maxHealth);
 
                 HealthChanged?.Invoke(_health);
 
@@ -25,6 +23,7 @@ namespace Sources.Gameplay.Runtime.Entities
         }
 
         private int _health;
+        private int _maxHealth;
         private EnemyData _data;
         private Enemy _enemy;
 
@@ -33,7 +32,8 @@ namespace Sources.Gameplay.Runtime.Entities
             _data = data;
             _enemy = enemy;
 
-            Health = _data.Health;
+            _maxHealth = _data.Health;
+            Health = _maxHealth;
         }
 
         public void ApplyDamage(int damage)

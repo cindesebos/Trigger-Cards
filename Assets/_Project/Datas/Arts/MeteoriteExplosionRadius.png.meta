@@ -1,10 +1,37 @@
 fileFormatVersion: 2
-guid: 90fa4674b836caa44927e236ea5ca89e
+guid: 479e49e623b7df24da4f1257a3582e79
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4116864735629085539
-    second: ToxinDirection_0
+      213: 644147954631268931
+    second: MeteoriteExplosionRadius_0
+  - first:
+      213: -5736621153622266560
+    second: MeteoriteExplosionRadius_1
+  - first:
+      213: -4077032997860818211
+    second: MeteoriteExplosionRadius_2
+  - first:
+      213: 7741582689357398878
+    second: MeteoriteExplosionRadius_3
+  - first:
+      213: -2223775699323168234
+    second: MeteoriteExplosionRadius_4
+  - first:
+      213: -446131118038639415
+    second: MeteoriteExplosionRadius_5
+  - first:
+      213: 4114389812266585994
+    second: MeteoriteExplosionRadius_6
+  - first:
+      213: 1829896235224900687
+    second: MeteoriteExplosionRadius_7
+  - first:
+      213: -8378191021091237165
+    second: MeteoriteExplosionRadius_8
+  - first:
+      213: -6394001463542183311
+    second: MeteoriteExplosionRadius_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +140,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ToxinDirection_0
+      name: MeteoriteExplosionRadius_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        y: 4
+        width: 117
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 36b018b3aaa022930800000000000000
-      internalID: 4116864735629085539
+      spriteID: 04d6a57647d6360b0800000000000000
+      internalID: -5736621153622266560
       vertices: []
       indices: 
       edges: []
@@ -138,7 +165,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e99e7927cba5ea64684fcc799f1a3799
+    spriteID: 4c7e1b0f75d44f448815d7162ed640cd
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +175,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ToxinDirection_0: 4116864735629085539
+      MeteoriteExplosionRadius_0: 644147954631268931
+      MeteoriteExplosionRadius_1: -5736621153622266560
+      MeteoriteExplosionRadius_2: -4077032997860818211
+      MeteoriteExplosionRadius_3: 7741582689357398878
+      MeteoriteExplosionRadius_4: -2223775699323168234
+      MeteoriteExplosionRadius_5: -446131118038639415
+      MeteoriteExplosionRadius_6: 4114389812266585994
+      MeteoriteExplosionRadius_7: 1829896235224900687
+      MeteoriteExplosionRadius_8: -8378191021091237165
+      MeteoriteExplosionRadius_9: -6394001463542183311
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
