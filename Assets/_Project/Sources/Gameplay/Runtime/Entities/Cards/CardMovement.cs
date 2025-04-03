@@ -59,7 +59,7 @@ namespace Sources.Gameplay.Runtime.Entities
 
         public void OnDrag(PointerEventData eventData)
         {
-            _canvasGroup.alpha = 0.1f;
+            _canvasGroup.alpha = 0.05f;
             Vector3 mousePosition = _camera.ScreenToWorldPoint(eventData.position);
             mousePosition.z = 0f;          
             transform.position = mousePosition + _offSet;

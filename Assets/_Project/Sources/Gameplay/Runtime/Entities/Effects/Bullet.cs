@@ -4,36 +4,36 @@ namespace Sources.Gameplay.Runtime.Entities
 {
     public class Bullet : MonoBehaviour
     {
-        private const float LifeTime = 2.5f;
+        protected const float LifeTime = 2.5f;
 
-        private Vector2 _direction;
-        private float _moveSpeed;
-        private int _damege;
-
+        protected Vector2 Direction;
+        protected float MoveSpeed;
+        protected int Damege;
 
         public void Init(int damege, float moveSpeed, Vector2 targetPosition)
         {
-            _moveSpeed = moveSpeed;
-            _damege = damege;
+            MoveSpeed = moveSpeed;
 
-            _direction = (targetPosition - (Vector2)transform.position).normalized;
-            float angle = Mathf.Atan2(_direction.y, _direction.x) * Mathf.Rad2Deg;
+            Damege = damege;
+
+            Direction = (targetPosition - (Vector2)transform.position).normalized;
+            float angle = Mathf.Atan2(Direction.y, Direction.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, angle);
 
             Invoke(nameof(Hide), LifeTime);
         }
 
-        public void Update() => transform.position += (Vector3)_direction * _moveSpeed * Time.deltaTime;
+        public void Update() => transform.position += (Vector3)Direction * MoveSpeed * Time.deltaTime;
 
         private void OnTriggerEnter2D(Collider2D other)
         {
             if(other.gameObject.TryGetComponent(out EnemyHealth enemyHealth))
             {
-                enemyHealth.ApplyDamage(_damege);
+                enemyHealth.ApplyDamage(Damege);
                 gameObject.SetActive(false);
             }
         }
 
-        private void Hide() => gameObject.SetActive(false);
+        protected void Hide() => gameObject.SetActive(false);
     }
 }

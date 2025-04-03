@@ -12,16 +12,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 246410ac4a985ff4d9d35cc13b2a1a86, type: 3}
   m_Name: CardSelectionPanelData
   m_EditorClassIdentifier: 
+  <MaxSelectedItems>k__BackingField: 3
+  <FadeDuration>k__BackingField: 0.5
+  <CardsMoveDuration>k__BackingField: 0.5
   _cardsRarityData:
-  - CategoryName: Common Cards
-    Rarity: 0
-    Probability: 55
-  - CategoryName: Rare Cards
-    Rarity: 1
-    Probability: 25
-  - CategoryName: Epic Cards
-    Rarity: 2
-    Probability: 15
-  - CategoryName: Legendary Cards
-    Rarity: 3
-    Probability: 5
+  - <CategoryName>k__BackingField: Common
+    <Rarity>k__BackingField: 0
+    _cards:
+    - {fileID: 11400000, guid: 1685fbb72ffc8c0469e88eb7ceb8b3f4, type: 2}
+    - {fileID: 11400000, guid: c04064c8958b8e148afeb26a62c06850, type: 2}
+    - {fileID: 11400000, guid: 45bd578924805764b931552ac5b1beb5, type: 2}
+    - {fileID: 11400000, guid: bdf83fa09957d4740abdd5d3b82a50f7, type: 2}
+    - {fileID: 11400000, guid: c253da84a6f18cf4fb7d26751c687817, type: 2}
+    <Probability>k__BackingField: 55
+    <UnknownCardIcon>k__BackingField: {fileID: 5542925698761986857, guid: 46b381f798528644a87eaaf7f6c86e0a, type: 3}
+  - <CategoryName>k__BackingField: Rare
+    <Rarity>k__BackingField: 1
+    _cards:
+    - {fileID: 11400000, guid: 2535ff2c3f295904c8969e40195a0e6f, type: 2}
+    - {fileID: 11400000, guid: 826eb28e550e70149b380a46ac9b87ba, type: 2}
+    - {fileID: 11400000, guid: 9b22708f68ee5ce41a3f55bfbd82fcc7, type: 2}
+    - {fileID: 11400000, guid: 22b9cb4871eaf574bbc8c6dadb622b8d, type: 2}
+    <Probability>k__BackingField: 25
+    <UnknownCardIcon>k__BackingField: {fileID: -5378756458226701737, guid: 46b381f798528644a87eaaf7f6c86e0a, type: 3}
+  - <CategoryName>k__BackingField: Epic
+    <Rarity>k__BackingField: 2
+    _cards:
+    - {fileID: 11400000, guid: 3bb4d65d5969e0a4092689aed41962e5, type: 2}
+    - {fileID: 11400000, guid: e37cfe78c2edca44eab81f6964e6d5ff, type: 2}
+    - {fileID: 11400000, guid: 98c15d1f46883844fa1589559c2b3d33, type: 2}
+    <Probability>k__BackingField: 15
+    <UnknownCardIcon>k__BackingField: {fileID: -7039552717889635898, guid: 46b381f798528644a87eaaf7f6c86e0a, type: 3}
+  - <CategoryName>k__BackingField: Legendary
+    <Rarity>k__BackingField: 3
+    _cards:
+    - {fileID: 11400000, guid: faf35dc37e0a47045a5d2f03691ef42d, type: 2}
+    - {fileID: 11400000, guid: f9f7eb54a3d2db3459a70085ddf16b2c, type: 2}
+    <Probability>k__BackingField: 5
+    <UnknownCardIcon>k__BackingField: {fileID: -3670444810596100101, guid: 46b381f798528644a87eaaf7f6c86e0a, type: 3}

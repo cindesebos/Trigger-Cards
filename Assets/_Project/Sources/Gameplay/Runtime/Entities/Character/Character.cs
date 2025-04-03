@@ -5,7 +5,7 @@ using Sources.Gameplay.Runtime.Buffs;
 namespace Sources.Gameplay.Runtime.Entities
 {
     [RequireComponent(typeof(CharacterMovement), typeof(CharacterHealth))]
-    public class Character : Entity, IBuffable
+    public class Character : Entity, IBuffable, IFreezable
     {
         [SerializeField] private Transform _dronePoint;
         [SerializeField] private CharacterMovement _movement;
@@ -64,5 +64,11 @@ namespace Sources.Gameplay.Runtime.Entities
         public bool IsImmortality() => _isImmortality;
 
         public bool IsLaserShootingState() => _isLaserShootingState;
+
+        public void SetFrozen(bool state) 
+        {
+            if(state) _input.Disable();
+            else _input.Enable();
+        }
     }
 }

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: EnemyData
   m_EditorClassIdentifier: 
   <Speed>k__BackingField: 2.5
-  <Health>k__BackingField: 8
+  <Health>k__BackingField: 20

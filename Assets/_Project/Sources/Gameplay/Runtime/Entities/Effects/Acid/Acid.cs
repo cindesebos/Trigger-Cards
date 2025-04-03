@@ -23,6 +23,8 @@ namespace Sources.Gameplay.Runtime.Entities
             _view.SetRandomSkin();
 
             StartCoroutine(JumpCoroutine(targetPosition));
+
+            Invoke(nameof(Hide), LifeTime);
         }
 
         private IEnumerator JumpCoroutine(Vector2 targetPosition)
@@ -53,5 +55,7 @@ namespace Sources.Gameplay.Runtime.Entities
 
             if(other.gameObject.TryGetComponent(out EnemyHealth enemyHealth)) enemyHealth.ApplyDamage(_damege);
         }
+
+        private void Hide() => gameObject.SetActive(false);
     }
 }

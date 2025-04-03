@@ -7,7 +7,7 @@ namespace Sources.Gameplay.Runtime.Entities
     public class TurretCardAbilityCaster : CardAbilityCaster
     {
         [SerializeField] private int _damage;
-        [SerializeField] private float _bulletSpeed;
+        [SerializeField] private float _maxBulletSpeed;
         [SerializeField] private float _shotCooldown;
         [SerializeField] private Turret _turret;
         [SerializeField] private SpriteRenderer _visualCastPrefab;
@@ -30,7 +30,7 @@ namespace Sources.Gameplay.Runtime.Entities
 
             Turret turret = Instantiate(_turret, mousePosition, Quaternion.identity);
 
-            turret.Init(_damage, _bulletSpeed, _shotCooldown);
+            turret.Init(_damage, _maxBulletSpeed, _shotCooldown);
         }
 
         public override void SetVisualCastDisplay(bool state)

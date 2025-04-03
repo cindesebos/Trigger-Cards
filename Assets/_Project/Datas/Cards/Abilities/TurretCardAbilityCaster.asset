@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: TurretCardAbilityCaster
   m_EditorClassIdentifier: 
   _damage: 1
-  _bulletSpeed: 13
-  _shotCooldown: 0.5
+  _maxBulletSpeed: 3
+  _shotCooldown: 0.15
   _turret: {fileID: 7195766782376942880, guid: a01196680346532498ee911073239380, type: 3}
   _visualCastPrefab: {fileID: 4038182791745340039, guid: d295b559ba26f87459340d978d948c89, type: 3}
   _visualCastSprite: {fileID: -9076254685148775836, guid: 005b71537c1c4b24aab9d14d482ffc6a, type: 3}

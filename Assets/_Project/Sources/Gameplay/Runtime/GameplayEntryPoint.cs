@@ -17,6 +17,8 @@ namespace Sources.Gameplay.Runtime
         [Inject]
         private void Construct(IEntitiesSpawner entitiesSpawner)
         {
+            Debug.Log(entitiesSpawner);
+
             _entitiesSpawner = entitiesSpawner;
             Character character = _entitiesSpawner.SpawnCharacter(_characterPrefab, _characterSpawnPoint.position);
             _entitiesSpawner.SpawnEnemy(_enemyPrefab, _enemySpawnPoint.position);

@@ -55,8 +55,8 @@ namespace Sources.Gameplay.Runtime.Entities
                 Debug.Log(target);
                 if(target.TryGetComponent(out IDamageable health))
                 {
-                    Debug.Log(target + " apply damage");
-                    health.ApplyDamage(_damage);
+                    if(health is CharacterHealth characterHealth) health.ApplyDamage(1);
+                    else health.ApplyDamage(_damage);
                 }
             }
 

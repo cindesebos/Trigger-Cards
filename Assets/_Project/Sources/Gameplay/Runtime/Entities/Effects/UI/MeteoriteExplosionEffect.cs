@@ -5,12 +5,12 @@ namespace Sources.Gameplay.Runtime.Entities
 {
     public class MeteoriteExplosionEffect : MonoBehaviour
     {
-        [SerializeField] private GameObject _view;
+        [SerializeField] private Animator _animator;
 
         private void OnEnable() => Meteorite.Exploded += OnExploded;
 
         private void OnDisable() => Meteorite.Exploded -= OnExploded;
 
-        private void OnExploded() => _view.SetActive(true);
+        private void OnExploded() => _animator.SetTrigger("appeared");
     }
 }

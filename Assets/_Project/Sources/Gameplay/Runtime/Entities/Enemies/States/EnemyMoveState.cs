@@ -32,7 +32,7 @@ namespace Sources.Gameplay.Runtime.Entities
 
         public override void Update()
         {
-            if(_target.Equals(null) || _enemy.IsStunned())
+            if(_target.Equals(null) || _enemy.IsStunned() || _enemy.IsFrozen())
             {
                 StateMachine.SetState<EnemyIdleState>();
             }

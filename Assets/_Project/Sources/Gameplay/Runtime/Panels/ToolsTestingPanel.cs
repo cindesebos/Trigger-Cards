@@ -11,19 +11,33 @@ namespace Sources.Gameplay.Runtime.Panels
         [SerializeField] private Card _cardPrefab;
         [SerializeField] private CardData _cardData;
         [SerializeField] private Transform _cardParent;
+        [SerializeField] private Enemy _enemyPrefab;
+        [SerializeField] private Transform _enemySpawnPoint;
         [SerializeField] private Button _spawnCardButton;
 
         private IEntitiesSpawner _entitiesSpawner;
+        private CardSelectionPanel _cardSelectionPanel;
 
         [Inject]
-        private void Construct(IEntitiesSpawner entitiesSpawner) 
+        private void Construct(IEntitiesSpawner entitiesSpawner, CardSelectionPanel cardSelectionPanel) 
         {
             _entitiesSpawner = entitiesSpawner;
+            _cardSelectionPanel = cardSelectionPanel;
         }
 
         public void CreateCard()
         {
             _entitiesSpawner.SpawnCard(_cardPrefab, _cardData, _cardParent);
+        }
+
+        public void ShowCardSelectionPanel()
+        {
+            _cardSelectionPanel.Show();
+        }
+
+        public void SpawnEnemy()
+        {
+            _entitiesSpawner.SpawnEnemy(_enemyPrefab, _enemySpawnPoint.position);
         }
     }
 }

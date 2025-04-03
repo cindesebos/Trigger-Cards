@@ -12,13 +12,10 @@ namespace Sources.Gameplay.Runtime.Entities
 
         public void Add(Entity entity)
         {
-            Debug.Log($"[EntitiesObserver] : was tried to add entity with name: {entity.gameObject.name} and with id {entity.Id}");
             if(entity == null || _entities.ContainsKey(entity.Id)) return;
 
             _entities.Add(entity.Id, entity);
             _freeId++;
-
-            Debug.Log($"[EntitiesObserver] : was added entity with name: {entity.gameObject.name} and with id {entity.Id}");
         }
 
         public void Remove(Entity entity)
@@ -62,6 +59,18 @@ namespace Sources.Gameplay.Runtime.Entities
             }
 
             return enemies;
+        }
+
+        public void SetFreezeStateAllEntities(bool state)
+        {
+            foreach(Entity entity in _entities.Values)
+            {              
+                if(entity is IFreezable freezable)
+                {
+                    Debug.Log(freezable);
+                    freezable.SetFrozen(state);
+                }
+            }
         }
     }
 }

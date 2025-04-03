@@ -7,10 +7,11 @@ using Sources.Gameplay.Runtime.Buffs;
 namespace Sources.Gameplay.Runtime.Entities
 {
     [RequireComponent(typeof(EnemyHealth))]
-    public class Enemy : Entity, IBuffable
+    public class Enemy : Entity, IBuffable, IFreezable
     {
         public event Action<Sprite> BuffApplied;
         public event Action BuffRemoved;
+        public bool _isFrozen;
 
         [SerializeField] private EnemyData _data;
         [SerializeField] private EnemyView _view;
@@ -99,5 +100,9 @@ namespace Sources.Gameplay.Runtime.Entities
         public bool IsStunned() => _isStunned;
 
         public bool IsDamageMultiplier() => _isMultipleDamage;
+
+        public void SetFrozen(bool state) => _isFrozen = state;
+
+        public bool IsFrozen() => _isFrozen;
     }
 }
